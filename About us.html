@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="icone1.PNG">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style> 
+* {
+  box-sizing: border-box;
+}
+[class*="col-"] {
+  float:left;
+  padding: 15px;
+}
+img {
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.blur {margin-left: 0%;}
+rcorners1:hover {
+  background-color: #0099cc;
+}
+
+.div1 {
+  border-radius: 25px;
+  background: #00ccb1;
+  padding: 20px; 
+  width: 300px;
+  height: 300px;  
+  color: aliceblue;
+  
+}
+.div1:hover{
+  background-color: #00ccb1c0;
+
+}
+.div2:hover{
+  background-color: #3d83dfbd;
+
+}
+.div3:hover{
+  background-color: #1b2734b5;
+
+}
+.div2 {
+  border-radius: 25px;
+  background: #3d83df;
+  padding: 20px; 
+  width: 300px;
+  height: 300px;  
+}
+.div3 {
+  border-radius: 25px;
+  background: #1b2734;
+  padding: 20px; 
+  width: 300px;
+  height: 300px;  
+}
+
+.row {  
+  display:flex;
+  flex-wrap: wrap;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 14.8%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 15%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 36%;}
+  .col-6 {width: 70%;}
+  .col-13 {width: 49%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+  .col-14 {width: 20%;}
+  .col-15 {width: 23%;}
+  .col-16 {width: 42%;}
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #ffffff;
+  padding: 20px 10px;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+
+#navbar a {
+  float: left;
+  color: rgb(80, 22, 22);
+  text-align: right;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+#navbar #logo {
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+#navbar li a:hover {
+  
+  color: rgb(0, 204, 177);
+}
+
+#navbar a.active {
+ 
+  color: rgb(74, 67, 67);
+}
+
+#navbar-right {
+  float: right;
+}
+
+@media screen and (max-width: 2000px) {
+  #navbar {
+    padding: 10px 10px !important;
+    
+   
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: right;
+    margin-left: px;
+    
+  }
+  #navbar-right {
+    float: none;
+  }
+}
+
+ul {
+        list-style-type:none;
+        margin: 0;
+        padding: 0;
+        margin-right: 10%;
+        padding: 0;
+        overflow: hidden;
+        
+        
+ 
+  width: 95%;
+      }
+     
+      
+      li {
+        float: left;
+      }
+      
+      li a {
+        display: block;
+        
+        text-align:left;
+        
+        text-decoration: none;
+        
+      }
+      
+      .dropdown {
+  float: left;
+  overflow: hidden;
+}
+a{
+  color: white;
+  text-decoration: none;
+  
+}
+
+.footer{
+  border-top: 1px solid rgb(222, 222, 222);
+  
+
+  text-align: center;
+}
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.BLOCA {
+ 
+  background:rgb(221, 248, 246);
+  width: 100%;
+  height: 560px;
+  margin: 0%;
+  margin: 0%;
+  
+}
+.box1 {
+  display: grid;
+  grid-template-columns: 20% 70% 15%;
+}
+
+.content-box {
+  box-sizing: content-box;
+  width: 200px;
+  height: 220px;
+  padding: 10px;
+  border-radius: 3%;
+  background: rgb(255, 255, 255);
+  animation-name: example;
+  animation-iteration-count:initial;
+  animation-direction:normal;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-timing-function: linear;
+  position: relative;
+
+
+  
+  /* Largeur totale : 160px + (2 * 20px) + (2 * 8px) = 216px
+     Hauteur totale : 80px + (2 * 20px) + (2 * 8px) = 136px
+     Largeur de la boîte de contenu : 160px
+     Hauteur de la boîte de contenu : 80px */
+}
+.content-box2 {
+  box-sizing: content-box;
+  width: 200px;
+  height: 220px;
+  padding: 10px;
+  border-radius: 3%;
+  background: rgb(255, 255, 255);
+  animation-name: example;
+  animation-iteration-count:initial;
+  animation-direction:normal;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+  position: relative;
+
+
+  
+  /* Largeur totale : 160px + (2 * 20px) + (2 * 8px) = 216px
+     Hauteur totale : 80px + (2 * 20px) + (2 * 8px) = 136px
+     Largeur de la boîte de contenu : 160px
+     Hauteur de la boîte de contenu : 80px */
+}
+
+.content-box3{
+  box-sizing: content-box;
+  width: 200px;
+  height: 220px;
+  padding: 10px;
+  border-radius: 3%;
+  background: rgb(255, 255, 255);
+  animation-name: example;
+  animation-iteration-count:initial;
+  animation-direction:normal;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-timing-function: linear;
+  position: relative;
+
+
+  
+  /* Largeur totale : 160px + (2 * 20px) + (2 * 8px) = 216px
+     Hauteur totale : 80px + (2 * 20px) + (2 * 8px) = 136px
+     Largeur de la boîte de contenu : 160px
+     Hauteur de la boîte de contenu : 80px */
+}
+
+.content-box4 {
+  box-sizing: content-box;
+  width: 200px;
+  height: 220px;
+  padding: 10px;
+  border-radius: 3%;
+  background: rgb(255, 255, 255);
+  animation-name:exemple;
+  animation-iteration-count:initial;
+  animation-direction:normal;
+  animation-duration: 2s;
+  animation-delay: 3s;
+  animation-timing-function: linear;
+  position:static;
+
+
+  
+  /* Largeur totale : 160px + (2 * 20px) + (2 * 8px) = 216px
+     Hauteur totale : 80px + (2 * 20px) + (2 * 8px) = 136px
+     Largeur de la boîte de contenu : 160px
+     Hauteur de la boîte de contenu : 80px */
+}
+.div5{
+  width: 300px;
+
+}
+
+@keyframes example {
+  0%  {  top:200px; bottom:0 ;}
+ 
+  100% {  top:0px; bottom:200 ;}
+}
+
+
+
+.border-box {
+  box-sizing: border-box;
+  width: 160px;
+  height: 80px;
+  padding: 20px;
+ 
+  background: rgb(255, 255, 255);
+  /* Largeur totale : 160px
+     Hauteur totale : 80px
+     Largeur de la boîte de contenu : 160px - (2 * 20px) - (2 * 8px) = 104px
+     Hauteur de la boîte de contenu : 80px - (2 * 20px) - (2 * 8px) = 24px */
+}
+
+div.gallery {
+  
+  border: 1px solid rgb(242, 242, 242);
+  float: left;
+  width: 300px;
+  border-radius: 1%;
+}
+
+div.gallery:hover {
+  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  display: inline-block;
+  
+
+}
+.btn {
+  background-color: #09549b;
+  border: none;
+  color: white;
+  padding: 13px 25px;
+  text-align: center;
+  font-size: 16px;
+  margin: 3px 3px;
+  
+  transition: 0.3s;
+  display: inline-block;
+  border-radius: 2PX;
+
+ 
+}
+
+.btn:hover {
+  background-color: #156ed4;
+}
+
+
+
+</style>
+
+</head>
+<body>
+  <div class="row">
+    <div id="navbar">
+    <div class="col-3 col-s-3 ">
+     
+    </div>
+  <div class="col-6 col-s-6">
+  
+    <!-- Note -->
+    
+      <ul>
+        <li> <img class="blur" src="logo.PNG" alt="Pineapple" id="logo">
+        </li>
+        
+        <li style="float:right;font-family:serif"><a class="active" href="">Departement </a></li>
+        <li style="float:right;font-family:serif"><a class="active" href="">Career </a>
+        <li style="float:right;font-family:serif"><a class="active" href="">About AS </a></li>
+        
+      </ul>      
+
+     
+    </div>
+
+
+  
+  </div>
+
+  <div style="margin-top:100px;padding:15px 15px ;font-size:30px">
+   
+</div>
+  
+  <script>
+    // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.getElementById("navbar").style.padding = "10px 10px";
+        document.getElementById("logo").style.fontSize = "25px";
+      } else {
+        document.getElementById("navbar").style.padding = "20px 10px";
+        document.getElementById("logo").style.fontSize = "35px";
+      }
+    }
+    </script>
+
+
+
+
+
+
+
+
+
+
+  
+  <div class="row">
+    <div class="col-3 col-s-3 ">
+     
+    </div>
+  <div class="col-6 col-s-9">
+    
+    
+    <img src="icone1.PNG" alt="Forest" >
+<h1 style="text-align:center ; color: #00ccb1;">Making the healthcare experience more human </h1>
+<br>
+<div class="col-13 col-s-9">
+  <p>We want patients to find the perfect doctor and book an appointment in the most easy way. The patient journey should be enjoyable, and that's why we are always next to them: to help them find the best possible care. Anytime, anywhere. </p>
+</div>
+<div class="col-13 col-s-9">
+  <p>We want patients to find the perfect doctor and book an appointment in the most easy way. The patient journey should be enjoyable, and that's why we are always next to them: to help them find the best possible care. Anytime, anywhere. </p>
+</div>
+<br>
+<div class="col-4 col-s-3 ">
+  <div class="div1">
+    <img class="blur" src="D.png" alt="Pineapple">
+     <h2 style="color:white ; ">For patients!</h2> 
+     <p style="color:white">Find a doctor, book a visit and solve any health-related doubt</p><br><br><br><br>
+     <div class="dropdown">
+      <button class="dropbtn"><u>Choose country </u>
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">choose country</a>
+        <a href="https://www.doctoraliar.com/">argentina</a>
+        <a href="https://www.doctoralia.com.br/">brazil</a>
+        <a href="https://www.doctoralia.cl/">chile</a>
+        <a href="https://www.doctoralia.co/">colombia</a>
+        <a href="https://www.znamylekar.cz/">gzech</a>
+        <a href="https://www.jameda.de/">germmany</a>
+        <a href="https://www.miodottore.it/">italy</a>
+        <a href="https://www.doctoralia.com.mx/">mexico</a>
+        <a href="https://www.doctoralia.pe/">peru</a>
+        <a href="https://www.znanylekarz.pl/">poland</a>
+        <a href="https://www.doctoralia.com.pt/">portugal</a>
+        <a href="https://www.doctoralia.es/">span</a>
+        <a href="https://www.doktortakvimi.com/">turkey</a>
+        
+      </div>
+    </div> 
+    </div>
+
+</div>
+<div class="col-4 col-s-3 ">
+  <div class="div2">
+    <img class="blur" src="p.png" alt="Pineapple">
+     <h2 style="color:white ; ">For doctors</h2> 
+     <p style="color:white">Save time managing visits and cut no-shows by half</p> <br><br><br><br>
+     <div class="dropdown">
+      <button class="dropbtn"><u>Choose country </u>
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">choose country</a>
+        <a href="https://www.doctoraliar.com/">argentina</a>
+        <a href="https://www.doctoralia.com.br/">brazil</a>
+        <a href="https://www.doctoralia.cl/">chile</a>
+        <a href="https://www.doctoralia.co/">colombia</a>
+        <a href="https://www.znamylekar.cz/">gzech</a>
+        <a href="https://www.jameda.de/">germmany</a>
+        <a href="https://www.miodottore.it/">italy</a>
+        <a href="https://www.doctoralia.com.mx/">mexico</a>
+        <a href="https://www.doctoralia.pe/">peru</a>
+        <a href="https://www.znanylekarz.pl/">poland</a>
+        <a href="https://www.doctoralia.com.pt/">portugal</a>
+        <a href="https://www.doctoralia.es/">span</a>
+        <a href="https://www.doktortakvimi.com/">turkey</a>
+        
+      </div>
+    </div> 
+    
+    
+    
+    </div>
+     
+
+</div>
+<div class="col-4 col-s-3 ">
+  <div class="div3" >
+    <img class="blur" src="C.png" alt="Pineapple">
+    <h2 style="color:white ; ">  Rounded corners!</h2> 
+    <p style="color:white">Deliver an exceptional patient experience in your clinic</p>
+   </div>
+   <div class="dropdown">
+    <button class="dropbtn"><u>Choose country </u>
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">choose country</a>
+      <a href="https://www.doctoraliar.com/">argentina</a>
+      <a href="https://www.doctoralia.com.br/">brazil</a>
+      <a href="https://www.doctoralia.cl/">chile</a>
+      <a href="https://www.doctoralia.co/">colombia</a>
+      <a href="https://www.znamylekar.cz/">gzech</a>
+      <a href="https://www.jameda.de/">germmany</a>
+      <a href="https://www.miodottore.it/">italy</a>
+      <a href="https://www.doctoralia.com.mx/">mexico</a>
+      <a href="https://www.doctoralia.pe/">peru</a>
+      <a href="https://www.znanylekarz.pl/">poland</a>
+      <a href="https://www.doctoralia.com.pt/">portugal</a>
+      <a href="https://www.doctoralia.es/">span</a>
+      <a href="https://www.doktortakvimi.com/">turkey</a>
+      
+    </div>
+  </div>
+ 
+
+</div>
+
+
+</div>
+</div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-3 col-s-3 ">
+     
+    </div>
+  <div class="col-6 col-s-9">
+    
+    
+   
+<div class="col-13 col-s-9">
+  
+</div>
+<div class="col-13 col-s-9">
+  
+</div>
+<br>
+<div class="col-4 col-s-3 ">
+  <div class="div5">
+    
+    <h1 style=" color: #00ccb1;">We are a global <br>company<br>
+      with local culture  </h1>
+    </div>
+
+</div>
+<div class="col-4 col-s-3 ">
+  <div class="div5">
+    
+      
+    <ul>
+      <li> <img class="blur" src="log1.PNG" alt="Pineapple" id="logo">
+      </li>
+      <li> <img class="blur" src="log2.PNG" alt="Pineapple" id="logo">
+
+        <li> <img class="blur" src="" alt="" id="logo">
+        </li>
+        <li> <img class="blur" src="log2.PNG" alt="Pineapple" id="logo">
+        </li> 
+        <li> <img class="blur" src="log4.PNG" alt="Pineapple" id="logo">
+        </li>     </ul>
+    
+    
+    </div>
+     
+
+</div>
+<div class="col-4 col-s-3 ">
+  <div class="div5" >
+    <ul>
+      <li> <img class="blur" src="LOG3.PNG" alt="Pineapple" id="logo">
+      </li>
+      <li> <img class="blur" src="log4.PNG" alt="Pineapple" id="logo">
+      </li><br>
+      <li> <img class="blur" src="LOG3.PNG" alt="Pineapple" id="logo">
+      </li>
+      <li> <img class="blur" src="log4.PNG" alt="Pineapple" id="logo">
+      </li>
+      <li> <img class="blur" src="log4.PNG" alt="Pineapple" id="logo">
+      </li>
+    </ul>
+   </div>
+   
+ 
+
+</div>
+
+
+</div>
+</div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="BLOCA">
+  
+
+
+
+
+
+
+
+  <div class="row">
+
+    <div class="col-3 col-s-3 ">
+     
+    </div>
+    <div class="col-5 col-s-3 ">
+    
+    <h1 style="color:rgb(0, 204, 177) ;">The world's biggest <br>
+    healthcare platform </h1>
+    <H3 style="color:rgb(141, 138, 138)">We work from 8 offices all over the world, bringing Docplanner <br>Group to life in 13 countries. </H3>
+   <BR>
+    <img class="blur" src="n.PNG" alt="Pineapple">
+    </div>
+    
+    <div class="col-1 col-s-3 "><BR></BR>
+      <div class="content-box">
+        <img src="1.PNG" alt="Forest" >
+        <h3 style="text-align:center ; color:#00ccb1">Leader in 13 <br> countries</h3>
+        <p style="color:rgb(139, 137, 137) ;font-size:11pt; text-align:start;">Poland, Brazil, Mexico, Spain, Italy, Germany, Turkey, Colombia, Czech Republic, Portugal, Argentina, Peru and Chile </p>
+      </div>
+      <br>
+      <div class="content-box3">
+        <img src="2.PNG" alt="Forest" >
+        <h3 style="text-align:center ; color:#00ccb1">80,000,000 <br>
+          patients</h3>
+        <p style="color:rgb(139, 137, 137) ;font-size:11pt; text-align:start;text-align: center;">visit our websites each month  </p>
+      </div>
+         </div> 
+         <div class="col-1 col-s-3 ">
+         <div class="content-box2">
+          <img src="3.PNG" alt="Forest" >
+          <h3 style="text-align:center ; color:#00ccb1">7,500,000 <br>
+            appointments</h3>
+        <p style="color:rgb(139, 137, 137) ;font-size:11pt; text-align:start;text-align: center;">booked last month  </p>
+         </div>
+         <br>
+         <div class="content-box4">
+          <img src="4.PNG" alt="Forest" >
+          <h3 style="text-align:center ; color:#00ccb1">130,000 <br>
+            active doctors</h3>
+        <p style="color:rgb(139, 137, 137) ;font-size:11pt; text-align:start;text-align: center;">trust our solutions </p>
+          
+        
+        
+         </div>
+        </div>
+  </div>
+ </div></div>
+ <br>
+ <div class="row">
+  <div class="col-4 col-s-4 "> </div>
+  <div class="col-4 col-s-4 "> 
+ <h1 style="text-align:center ; color:#00ccb1">Improve the lives of millions.<br> Change yours forever. </H1>
+  <p style="text-align:center ;">More than 2,200 team mates share our same vision, goals and passion.<br> With offices in Warsaw, Barcelona, Munich, Istanbul, Rome, Bologna,<br> Mexico City and Curitiba, our search for great talent never stops.</p>
+</div>
+  <div class="col-4 col-s-4 "> </div>
+ </div>
+<!-- boxs images -->
+
+
+<div class="row">
+  <div class="col-3 col-s-3 ">
+   
+  </div>
+  <div class="col-15 col-s-3 ">
+
+ <div class="gallery">
+
+
+  
+
+    <img src="A.PNG" alt="Cinque Terre">
+ 
+  <div class="desc">Warsaw</div><button style="float:right ; font-size:12px; color: #ffffff;"  class="btn"><a href="https://www.docplanner.com/career?&loc=poland#jobs-offers"> See openings</a></button>
+</div>
+</div>
+<div class="col-15 col-s-3 ">
+<div class="gallery">
+  
+    <img src="BB.PNG" alt="Forest" >
+ 
+  <div class="desc">Borcelona</div><button style="float:right ; font-size:12px; color: #ffffff;"  class="btn"><a href="https://www.docplanner.com/career?&loc=spain#jobs-offers"> See openings</a></button>
+</div>
+</div>
+<div class="col-15 col-s-3 ">
+<div class="gallery">
+  
+    <img src="CC.PNG" alt="Northern Lights" >
+  
+  <div class="desc">Munich</div><button style="float:right ; font-size:12px; color: #ffffff;"  class="btn"><a href="https://www.docplanner.com/career?&loc=germany#jobs-offers"> See openings</a></button>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+  <div class="col-3 col-s-3 ">
+   
+  </div>
+  <div class="col-15 col-s-3 ">
+
+ <div class="gallery">
+
+
+  
+
+    <img src="DD.PNG" alt="Cinque Terre">
+ 
+  <div class="desc">Istanbul</div><button style="float:right ; font-size:12px; color: #ffffff;"  class="btn"><a href="https://www.docplanner.com/career?&loc=turkey#jobs-offers"> See openings</a></button>
+</div>
+</div>
+<div class="col-15 col-s-3 ">
+
+  <div class="gallery">
+ 
+ 
+   
+ 
+     <img src="EE.PNG" alt="Cinque Terre">
+  
+   <div class="desc">Warsaw</div><button style="float:right ; font-size:12px; color: #ffffff;"  class="btn"><a href=""> See openings</a></button>
+ </div>
+ </div>
+ <div class="col-15 col-s-3 ">
+
+  <div class="gallery">
+ 
+ 
+   
+ 
+     <img src="FF.PNG" alt="Cinque Terre">
+  
+   <div class="desc">Warsaw</div><button style="float:right ; font-size:12px; color: #ffffff;"  class="btn"><a href=""> See openings</a></button>
+ </div>
+ </div>
+</div>
+<div class="row">
+  <div class="col-3 col-s-3 ">
+   
+  </div>
+  <div class="col-15 col-s-3 ">
+
+ <div class="gallery">
+
+
+  
+
+    <img src="JJ.PNG" alt="Cinque Terre">
+ 
+  <div class="desc">Warsaw</div><button style="float:right ; font-size:12px; color: #ffffff;"  class="btn"><a href=""> See openings</a></button>
+</div>
+</div>
+<div class="col-15 col-s-3 ">
+
+  <div class="gallery">
+ 
+ 
+   
+ 
+     <img src="II.PNG" alt="Cinque Terre">
+  
+   <div class="desc">Warsaw</div><button style="float:right ; font-size:12px; color: #ffffff;"  class="btn"><a href=""> See openings</a></button>
+ </div>
+ </div>
+
+</div>
+<h1 style="text-align:center;">Sounds interesting? Join us now! </h1>
+
+
+<div class="row">
+  <div class="col-16 col-s-3 ">
+   
+  </div>
+  <div class="col-15 col-s-3 "><button style="font-size:12px;  color: #ffffff; text-align: center;"  class="btn"><a href="="> SEE All CURRENT OPENINGS</a></button></div>
+    <div class="col-5 col-s-3 ">
+   
+  </div>
+</div>
+
+
+
+<div class="footer">
+
+<p style="color:#646769 ; text-align:center; font-size:12px">We are leaders in 13 countries:<a style="color:#00ccb1;" href=""> Poland</a> ,<a style="color:#00ccb1;" href=""> Turkey</a>,<a style="color:#00ccb1;" href=""> Spain</a>,<a style="color:#00ccb1;" href=""> Italy</a>,<a style="color:#00ccb1;" href=""> Germany</a>,<a style="color:#00ccb1;" href=""> Czech Republic</a>,<a style="color:#00ccb1;" href=""> Mexico</a>,<a style="color:#00ccb1;" href=""> Colombia</a>,<a style="color:#00ccb1;" href=""> Brazil</a>,<a style="color:#00ccb1;" href=""> Poland</a>,<a style="color:#00ccb1;" href=""> Argentina</a>,<a style="color:#00ccb1;" href=""> Peru</a>,and <a style="color:#00ccb1;" href="">  Chile</a> <br> <br>
+
+  This site uses cookies to deliver services in accordance with this Privacy Policy. You can specify the conditions for storing or accessing cookies on your browser.<br>
+  www.docplanner.com © 2022 </p>
+</div>
+
+</body>
+</html>
+
+
